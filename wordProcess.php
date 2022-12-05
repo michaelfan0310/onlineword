@@ -1,7 +1,14 @@
 <?php
+    $checkCode=$_POST['checkCode'];
+  
+    session_start();   
+    
+    
+    if($checkCode != $_SESSION['myCheckCode']){
+        header("Location: wordsView.php?errno=3");
+        exit();
+    } 
 
-
- 
     $type=$_REQUEST['type'];
     
     $xmldoc=new DOMDocument();
@@ -44,7 +51,7 @@
         }else{
             echo "添加成功！！";
             }
-            echo "<br/>".'<a href="wordsView.php">返回主界面</a>';
+            echo "<br/>".'<a href="dictionaryEntry.php">返回主界面</a>';
     }
    
     

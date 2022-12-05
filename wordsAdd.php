@@ -8,27 +8,28 @@
  <link href="styles.css" rel="stylesheet">
 
 </head>
-
 <body>
 <div id="wrapper" class="hffeed">
 <img src="jinshan.png" width=30% />
 
 
-<h1>查询单词</h1>
 
-   <form action="wordProcess.php" method="post" >
-          请输入英文单词/Words： <input type="text" name="engword" />
-              <input type="hidden" name="type"  value="query" />
-    		 
 
-      <p>&nbsp;&nbsp;验证码/checkCode:&nbsp;<input type="text" id="psw2" name="checkCode"  /> 
-      <img src="checkCode.php" onclick="this.src='checkCode.php?aa='+Math.random()" /></p>  
+ <h1>ADD WORDS</h1>
+  <form action="wordProcess.php" method="post" >
+           English Word： <input type="text" name="engword" /><br/>
+           请添加中文注释/Chiness： <input type="text" name="chword" /><br/>
+           
+      <p>&nbsp;&nbsp;验证码/Code:&nbsp;<input type="text" id="psw2" name="checkCode"  /> 
+      <img src="checkCode.php" onclick="this.src='checkCode.php?aa='+Math.random()" /></p>   
 
-      <input type="submit" value="查询" />
+         <input type="hidden" name="type"  value="add" />
+    		 <input type="submit" value="Submit" />
+  
     </form>
-
-</div>
+    </div>
 </body>
+
     <?php
 
     
@@ -50,10 +51,9 @@
         }
 
         }
-        // <?php echo $_COOKIE['usrid'];
+       
 
     ?>
 
 
 </html>
-

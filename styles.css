@@ -1,0 +1,9 @@
+a {text-decoration: none;}
+#wrapper {width: 40%;
+          background: #fff;
+          margin: 10% auto;  }          
+h1,p,form {text-align:center;}  
+input,img{ display:block;
+    margin-left: auto;        
+    margin-right: auto;}       
+body {background: darkblue;}
