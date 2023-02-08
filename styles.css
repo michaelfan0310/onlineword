@@ -1,10 +1,13 @@
 a {text-decoration: none;}
 #wrapper {width: 40%;
           background: #fff;
-          margin: 10% auto;  
+          margin: 10% auto 2%;
+          padding: 0 3%;  
           text-align:center;}          
-.hffeed2,h1,p,form,$word,a,a: {text-align:center;}  
+.hffeed2,h1,p,form,a,a: {text-align:center;}  
 input,img{ display:block;
     margin-left: auto;        
-    margin-right: auto;}       
+    margin-right: auto;}  
+.hffeed3{color: #fff;
+         width: 90%;}    
 body {background: darkblue;}

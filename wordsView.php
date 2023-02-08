@@ -14,7 +14,7 @@
 <img src="jinshan.png" width=30% />
 
 
-<h1>查询单词</h1>
+<h1>Word Query</h1>
 
    <form action="wordProcess.php" method="post" >
           请输入英文单词/Words： <input type="text" name="engword" />

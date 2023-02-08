@@ -19,10 +19,28 @@
 <h1><a href="wordsAdd.php">Add_New_Word</a></h1>
 <p>to my personal dictionary</p>   
 </div>
-<javascript>
-    
+<div class= "hffeed3">
 
-</javascript>
+<?php
+    $xmldoc=new DOMDocument();
+    $xmldoc->load("words.xml");
+
+    $words=$xmldoc->getElementsByTagName("word");
+    echo "<div class= 'hffeed3'>" ;   
+        for($i=$words->length-1;$i>=0;$i--){
+            $word=$words->item($i);
+            $word_en=getNodeVal($word,"en");
+            
+          
+                
+            echo $word_en."&nbsp"."&nbsp"."&nbsp";}
+    echo "</div >" ; 
+    function  getNodeVal(&$MyNode,$tagName){
+        return $MyNode->getElementsByTagName($tagName)->item(0)->nodeValue;
+          }            
+
+?>
+</div>
 
 </body>
 </html>
