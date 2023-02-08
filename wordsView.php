@@ -21,8 +21,8 @@
               <input type="hidden" name="type"  value="query" />
     		 
 
-      <p>&nbsp;&nbsp;验证码/checkCode:&nbsp;<input type="text" id="psw2" name="checkCode"  /> 
-      <img src="checkCode.php" onclick="this.src='checkCode.php?aa='+Math.random()" /></p>  
+   <p>&nbsp;&nbsp;验证码/checkCode:&nbsp;<input type="text" id="psw2" name="checkCode"  /> 
+   <img src="checkCode.php" onclick="this.src='checkCode.php?aa='+Math.random()" /></p>  
 
       <input type="submit" value="查询" />
     </form>

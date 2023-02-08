@@ -17,10 +17,13 @@
 <h1><a href="wordsView.php">Query_Word</a></h1>
 
 <h1><a href="wordsAdd.php">Add_New_Word</a></h1>
-<p>to my personal dictionary</p>
-
-   
+<p>to my personal dictionary</p>   
 </div>
+<javascript>
+    
+
+</javascript>
+
 </body>
 </html>
 

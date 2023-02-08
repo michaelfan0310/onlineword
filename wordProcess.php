@@ -1,4 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>personal dictionary</title>
+ <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="wrapper" class="hffeed">
+<img src="jinshan.png" width=30% />
+
+
+<h1>Result of Query</h1>
+
+
+
+
 <?php
+    echo "<div class='hffeed2'>";
     $checkCode=$_POST['checkCode'];
   
     session_start();   
@@ -27,6 +49,7 @@
             
             if($query_word==$word_en){                
                 $isEnter=true;
+                
                 echo $query_word."&nbsp;对应中文是：".getNodeVal($word,"ch")."<br/>";
             }
         }       
@@ -58,5 +81,11 @@
     function  getNodeVal(&$MyNode,$tagName){
         return $MyNode->getElementsByTagName($tagName)->item(0)->nodeValue;
     }
+    echo "</div>";
      
 ?>
+
+</div>
+</body>
+
+<html>
