@@ -4,10 +4,15 @@ a {text-decoration: none;}
           margin: 10% auto 2%;
           padding: 0 3%;  
           text-align:center;}          
-.hffeed2,h1,p,form,a,a: {text-align:center;}  
+.hffeed2,h1,p,form,a {text-align:center;}  
 input,img{ display:block;
     margin-left: auto;        
-    margin-right: auto;}  
-.hffeed3{color: #fff;
-         width: 90%;}    
-body {background: darkblue;}
+    margin-right: auto;} 
+
+#btomfeed {
+           width: 90%;  
+           margin: 0 3% 5% 2%;
+           color: white;}
+         
+body {background: darkblue;   
+    width: 100%;}
