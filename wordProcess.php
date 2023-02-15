@@ -56,7 +56,8 @@
         if(!$isEnter){
            echo "<br/>查询无此词条！！";
     }
-    echo '<a href="wordsView.php">返回主界面</a>';
+    echo '<a href="wordQuery.php">返回查询</a>'.'&nbsp'.'&nbsp';
+    echo "<br/>".'<a href="dictionaryEntry.php">返回主界面</a>';
     }elseif($type=="add"){
         $root=$xmldoc->getElementsByTagName("words")->item(0);
         $new_word=$xmldoc->createElement("word");
@@ -74,6 +75,7 @@
         }else{
             echo "添加成功！！";
             }
+            echo '<a href="wordQuery.php">返回查询</a>'.'&nbsp'.'&nbsp';
             echo "<br/>".'<a href="dictionaryEntry.php">返回主界面</a>';
     }
    
