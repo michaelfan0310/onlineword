@@ -4,14 +4,14 @@ a {text-decoration: none;}
           margin: 10% auto 2%;
           padding: 0 3%;  
           text-align:center;}          
-.hffeed2,h1,p,form,a {text-align:center;}  
+h1,p,form,a {text-align:center;}  
 input,img{ display:block;
     margin-left: auto;        
     margin-right: auto;} 
 
-#btomfeed {
+.feed {
            width: 90%;  
-           margin: 0 3% 5% 2%;
+           margin: -2% 5% 5% 5%;
            color: white;}
          
 body {background: darkblue;   

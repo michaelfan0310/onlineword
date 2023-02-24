@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<div id="wrapper" class="hffeed">
+<div id="wrapper" >
 <img src="jinshan.png" width=30% />
 
 
@@ -26,19 +26,22 @@
     $xmldoc->load("words.xml");
 
     $words=$xmldoc->getElementsByTagName("word");
-    // echo "<div class='feed'>" ;   
-        for($i=$words->length-1;$i>=0;$i--){
-            $word=$words->item($i);
-            $word_en=getNodeVal($word,"en");            
-                           
-            echo $word_en."&nbsp"."&nbsp"."&nbsp";     
+
+    echo "<div class='feed'>" ;   
+    for($i=$words->length-1;$i>=0;$i--){
+        $word=$words->item($i);
+        $word_en=getNodeVal($word,"en");            
+        // $word_ch=getNodeVal($word,"ch");                   
+        echo $word_en."&nbsp"."&nbsp"."&nbsp";     
           }
-    // echo "</div >" ; 
+    echo "</div >" ; 
+
     function  getNodeVal(&$MyNode,$tagName){
         return $MyNode->getElementsByTagName($tagName)->item(0)->nodeValue;
           }            
 
 ?>
+
 </div >
 
 </body>
