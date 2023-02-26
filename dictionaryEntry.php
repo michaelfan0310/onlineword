@@ -30,7 +30,8 @@
     echo "<div class='feed'>" ;   
     for($i=$words->length-1;$i>=0;$i--){
         $word=$words->item($i);
-        $word_en=getNodeVal($word,"en");            
+        $word_en=getNodeVal($word,"en");  
+    // $word_en.onmousedown='alert($word_ch=getNodeVal($word,"ch");); '         
         // $word_ch=getNodeVal($word,"ch");                   
         echo $word_en."&nbsp"."&nbsp"."&nbsp";     
           }

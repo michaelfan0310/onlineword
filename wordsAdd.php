@@ -17,8 +17,8 @@
 
  <h1>ADD WORDS</h1>
   <form action="wordProcess.php" method="post" >
-           English Word： <input type="text" name="engword" /><br/>
-           请添加中文注释/Chiness： <input type="text" name="chword" /><br/>
+           English Word: <input type="text" name="engword" /><br/>
+           请添加中文注释/Chiness: <input type="text" name="chword" /><br/>
            
       <p>&nbsp;&nbsp;验证码/Code:&nbsp;<input type="text" id="psw2" name="checkCode"  /> 
       <img src="checkCode.php" onclick="this.src='checkCode.php?aa='+Math.random()" /></p>   

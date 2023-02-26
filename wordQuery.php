@@ -17,7 +17,7 @@
 <h1>Word Query</h1>
 
    <form action="wordProcess.php" method="post" >
-          请输入英文单词/Words： <input type="text" name="engword" />
+          请输入英文单词/Words: <input type="text" name="engword" />
               <input type="hidden" name="type"  value="query" />
     		 
 
