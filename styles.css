@@ -1,7 +1,7 @@
 a {text-decoration: none;}
 #wrapper {width: 40%;
           background: #fff;
-          margin: 10% auto 4%;
+          margin: 6% auto 2%;
           padding: 0 3%;  
           text-align:center;}          
 h1,p,form,a {text-align:center;}  
@@ -17,7 +17,7 @@ input,img{ display:block;
 body {background: darkblue;   
     width: 100%;}
 
-.button5 {
+.btn5, .btn6{
         background-color: darkblue;
         border: none;
         color: white;
