@@ -30,31 +30,36 @@
     $xmldoc->load("words.xml");
 
     $words=$xmldoc->getElementsByTagName("word");
-  
-
+    
+echo '<div  id="enwords" >'; 
     for($i=$words->length-1;$i>=0;$i--){
         $word=$words->item($i);
         $word_en=getNodeVal($word,"en");  
         $word_ch=getNodeVal($word,"ch");    
         
        
-        echo '<button type="button" class="btn5" >';                 
+// echo '<button type="submit" class="btn5" id="btn'.$i.'" >';   
+
+echo '<button type="submit" class="btn5" value="'.$i.'" >';   
         echo $i.'.'.'&nbsp'.$word_en;
         echo "</button>" ;     
        
          }    
-         
-         for($i=$words->length-1;$i>=0;$i--){
+echo '</div >'; 
+
+echo '<div  id="chwords" >'; 
+    for($i=$words->length-1;$i>=0;$i--){
           $word=$words->item($i);
           $word_en=getNodeVal($word,"en");  
           $word_ch=getNodeVal($word,"ch");       
-          
-  
-        echo '<button type="button" class="btn6" >';                 
-          echo $i.'&nbsp'.$word_ch;          
-          echo "</button>" ; 
+// echo '<button type="button" class="btn6" id="btnc'.$i.'" >';       
+
+echo '<button type="button" class="btn6" value="'.$i.'" >';   
+        echo $i.'.'.'&nbsp'.$word_ch;          
+        echo "</button>" ; 
          
            }  
+echo '</div >'; 
 
     function  getNodeVal(&$MyNode,$tagName){
         return $MyNode->getElementsByTagName($tagName)->item(0)->nodeValue;
@@ -67,22 +72,33 @@
 
  var $btns = $('.btn5');
   console.log($btns.size(),$btns.length)//4 4
-var $btns2=$('.btn6');
-var words2=[];
-
-$.each($btns2,function(i,item){
+var $btnsC=$('.btn6');
+var wordsC=[];
+var array=[]
+$.each($btnsC,function(i,item){
           console.log(i,item.innerHTML);  
-          words2.push(item.innerHTML);         
+          wordsC.push($(item).text());  
+          array.push(i); 
+          // console.log(array);  
         
     }) 
   
-  $(function(){
+
  
-    $($('.btn5')).click(function(index,item){
-      var index=this.innerHTML.$i;
-      alert($($btns2[index]).html());
+$(':submit').click(function(){
+     var length=$btns.length-1;
+      var ind=length-$(this).val();
+      // alert($($btns2[index]).html());
+      alert(wordsC[ind]);
     })
-  }) 
+
+$('.btn6').click(function(){
+    //  var length=$btns.length-1;
+     var ind=$(this).index();
+      // var ind=length-$(this.id).innerHTML;
+      // alert($($btns2[index]).html());
+      alert($($btns[ind]).text());
+    })
 
 // for(var i=0;i<$btns.length;i++){
 
@@ -91,7 +107,7 @@ $.each($btns2,function(i,item){
 //           alert(words2[i]);
 //         } 
 //       }
- console.log(words2); 
+ console.log(wordsC); 
 
 
   // for(let i=0; i<$btns.length;i++){
@@ -106,8 +122,8 @@ $.each($btns2,function(i,item){
 
   //需求2. 取出第2个button的文本
   /*[index]/get(index): 得到对应位置的DOM元素*/
-  // $.foreach()
-  console.log($btns.get(1).innerHTML,$btns[1].innerHTML)
+
+  console.log($btns.get(1).innerHTML,$btns[1].innerHTML);
  
 
 // $(function () {
