@@ -16,11 +16,11 @@
 
 
  <h1>ADD WORDS</h1>
-  <form action="wordProcess.php" method="post" >
-           English Word: <input type="text" name="engword" /><br/>
-           请添加中文注释/Chiness: <input type="text" name="chword" /><br/>
+  <form action="wordProcess.php" method="post" id="wordForm">
+           English Word: <input type="text" name="engword" id="enword" required minlength="2"/><br/>
+           请添加中文注释/Chiness: <input type="text" name="chword" id="chword" required minlength="2"/><br/>
            
-      <p>&nbsp;&nbsp;验证码/Code:&nbsp;<input type="text" id="psw2" name="checkCode"  /> 
+      <p>&nbsp;&nbsp;验证码/Code:&nbsp;<input type="text" id="psw2" name="checkCode"  required /> 
       <img src="checkCode.php" onclick="this.src='checkCode.php?aa='+Math.random()" /></p>   
 
          <input type="hidden" name="type"  value="add" />
@@ -28,6 +28,28 @@
   
     </form>
     </div>
+
+<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript">
+    // 声明式验证：程序员只需要声明各种验证规则，可以自定义验证错误信息
+    $('#wordForm').validate({
+        messages: {
+            engword: {
+                required: 'This field is required.',
+                minlength: 'Please enter at least 2 characters.'
+            },
+            chword: {
+                required: 'This field is required.',
+                rangelength: 'Please enter at least 2 characters'
+            },
+            checkCode: {
+                required: 'This field is required.',
+                // equalTo: '确认密码不相同'
+            },
+        }
+    });
+</script>
 </body>
 
     <?php
